@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">APP PerimMirim</string>
+    <string name="nome_completo">Nome completo</string>
+    <string name="cpf">CPF</string>
+    <string name="data_de_nascimento">Data de Nascimento</string>
+    <string name="n_mero_de_telefone">Número de telefone</string>
+    <string name="email">Email</string>
+    <string name="endere_o">Endereço</string>
+    <string name="senha">Senha</string>
+    <string name="confirmar_senha">Confirmar Senha</string>
+    <string name="selecionar_foto_do_documento_rg">Selecionar Foto do Documento (RG)</string>
+    <string name="selecionar_foto_de_perfil">Selecionar Foto de Perfil</string>
+    <string name="cadastrar">Cadastrar</string>
 </resources>
