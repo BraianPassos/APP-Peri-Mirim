@@ -11,4 +11,5 @@
     <string name="selecionar_foto_do_documento_rg">Selecionar Foto do Documento (RG)</string>
     <string name="selecionar_foto_de_perfil">Selecionar Foto de Perfil</string>
     <string name="cadastrar">Cadastrar</string>
+    <string name="alerta" />
 </resources>
