@@ -33,25 +33,37 @@
             android:textColor="#000000"
             android:layout_marginBottom="24dp" />
 
-        <!-- Login (CPF) -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/cpf_layout"
+        <!-- CPF com ícone à esquerda -->
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="CPF"
-            app:startIconDrawable="@drawable/ic_user"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
             android:layout_marginBottom="16dp">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edit_cpf"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:maxLength="11" />
-        </com.google.android.material.textfield.TextInputLayout>
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_user"
+                android:contentDescription="Ícone de usuário"
+                android:layout_marginEnd="12dp" />
 
-        <!-- Senha -->
+            <EditText
+                android:id="@+id/edit_cpf"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="CPF"
+                android:inputType="number"
+                android:maxLength="11"
+                android:background="@null"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Senha com ícone e toggle -->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/password_layout"
             android:layout_width="match_parent"
@@ -73,19 +85,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="space_between"
-            android:layout_marginBottom="24dp">
+            android:layout_marginBottom="24dp"
+            android:weightSum="1">
 
             <CheckBox
                 android:id="@+id/check_save_login"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.5"
                 android:text="Salvar login" />
 
             <TextView
                 android:id="@+id/text_forgot_password"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="end"
                 android:text="Esqueceu a senha?"
                 android:textColor="@color/blue"
                 android:textSize="14sp"
