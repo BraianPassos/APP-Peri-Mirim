@@ -105,7 +105,22 @@ class CadastroActivity : AppCompatActivity() {
         // Aqui você pode enviar os dados para o Firebase, API, ou salvar localmente
         Toast.makeText(this, "Cadastro realizado com sucesso!", Toast.LENGTH_LONG).show()
 
-        // Exemplo: finalizar a activity após cadastro
+        // 🔥 Redirecionamento para a tela de usuário
+        val intent = Intent(this, TelaUsuarioActivity::class.java)
+
+        // ✔️ Enviar dados do usuário para a próxima tela (opcional)
+        intent.putExtra("nome", nome)
+        intent.putExtra("cpf", cpf)
+        intent.putExtra("email", email)
+        intent.putExtra("telefone", telefone)
+        intent.putExtra("dataNascimento", dataNascimento)
+        intent.putExtra("endereco", endereco)
+        intent.putExtra("uriFotoPerfil", uriFotoPerfil.toString())
+
+        startActivity(intent)
+
+        // Finaliza a tela de cadastro para não voltar nela ao apertar 'back'
         finish()
     }
+
 }
