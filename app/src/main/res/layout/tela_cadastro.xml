@@ -1,140 +1,77 @@
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app= "http://schemas.android.com/apk/res-auto"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp">
+    android:background="@android:color/white">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
 
-        <!-- Nome -->
+        <!-- Ícone de usuário -->
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_user" />
+
+        <!-- Subtítulo -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cadastro de Usuário"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Campos de entrada -->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/nome_completo">
+            android:layout_marginTop="12dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editNome"
+                android:id="@+id/edtNome"
+                android:hint="Nome completo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
-                android:paddingVertical="12dp"
-                android:inputType="textPersonName" />
+                android:padding="12dp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- CPF -->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/cpf"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="8dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editCPF"
+                android:id="@+id/edtCpf"
+                android:hint="CPF"
+                android:inputType="number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
-                android:paddingVertical="12dp"
-                android:inputType="number" />
+                android:padding="12dp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Data de Nascimento -->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/data_de_nascimento"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="8dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editDataNasc"
+                android:id="@+id/edtDataNascimento"
+                android:hint="Data de nascimento"
+                android:inputType="date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:minHeight="48dp"
-                android:paddingVertical="12dp"
-                android:inputType="date" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!-- Número de Telefone -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/n_mero_de_telefone"
-            android:layout_marginTop="16dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editNumeroTelefone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:paddingVertical="12dp"
-                android:inputType="phone" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!-- Email -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/email"
-            android:layout_marginTop="16dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editEmail"
-                android:layout_width="376dp"
-                android:layout_height="match_parent"
-                android:inputType="textEmailAddress"
-                android:minHeight="48dp"
-                android:paddingVertical="12dp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!-- Endereço -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/endere_o"
-            android:layout_marginTop="16dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editEndereco"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:paddingVertical="12dp"
-                android:inputType="textPostalAddress" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!-- Senha -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/senha"
-            android:layout_marginTop="16dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editSenha"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:paddingVertical="12dp"
-                android:inputType="textPassword" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!-- Confirmar Senha -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/confirmar_senha"
-            android:layout_marginTop="16dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/editConfirmarSenha"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="48dp"
-                android:paddingVertical="12dp"
-                android:inputType="textPassword" />
+                android:padding="12dp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Botão para selecionar foto do documento -->
@@ -142,24 +79,89 @@
             android:id="@+id/btnFotoDocumento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/selecionar_foto_do_documento_rg"
-            android:layout_marginTop="24dp" />
+            android:text="Foto do documento de identificação"
+            android:layout_marginTop="12dp"
+            android:minHeight="48dp"/>
 
         <!-- Botão para selecionar foto de perfil -->
         <Button
             android:id="@+id/btnFotoPerfil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/selecionar_foto_de_perfil"
-            android:layout_marginTop="8dp" />
+            android:text="Foto do Perfil"
+            android:layout_marginTop="8dp"
+            android:minHeight="48dp"/>
 
-        <!-- Botão de Cadastro -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtTelefone"
+                android:hint="Número telefônico"
+                android:inputType="phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:padding="12dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtEmail"
+                android:hint="E-mail"
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:padding="12dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtSenha"
+                android:hint="Senha"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:padding="12dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtEndereco"
+                android:hint="Endereço"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:padding="12dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Botão cadastrar -->
         <Button
             android:id="@+id/btnCadastrar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/cadastrar"
-            android:layout_marginTop="24dp" />
+            android:layout_marginTop="16dp"
+            android:minHeight="48dp"
+            android:backgroundTint="#00FF00"
+            android:text="CADASTRAR"
+            android:textColor="@android:color/white"/>
 
     </LinearLayout>
+
 </ScrollView>
